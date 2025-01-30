@@ -1,5 +1,6 @@
 package com.mehmetberkan.springrediscategorycacheexample.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,6 +10,7 @@ import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductCategory implements Serializable {
 
     @Id
